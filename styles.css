@@ -109,6 +109,55 @@ footer {
     font-size: 0.9rem;
 }
 
+/* 블로그 포스트 페이지 스타일 */
+.post-content {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.post-content h1 {
+    color: #2e73b8;
+    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+}
+
+.content {
+    margin: 2rem 0;
+}
+
+.content p {
+    margin-bottom: 1.5rem;
+}
+
+.content ul, .content ol {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+}
+
+.content li {
+    margin-bottom: 0.5rem;
+}
+
+.post-navigation {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.back-link {
+    display: inline-block;
+    color: #2e73b8;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
 /* 반응형 디자인 */
 @media (max-width: 768px) {
     header h1 {
@@ -117,5 +166,9 @@ footer {
     
     .tagline {
         font-size: 1rem;
+    }
+    
+    .post-content h1 {
+        font-size: 1.8rem;
     }
 }
