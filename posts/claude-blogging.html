@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude를 이용하여 블로그하기 - Don Bunny Park's Notes</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Don Bunny Park's Notes</h1>
+            <p class="tagline">AI와 IT를 배우고 활용하는 일상 블로그</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="post-content">
+            <h1>Claude를 이용하여 블로그하기</h1>
+            <p class="date">2025년 4월 15일</p>
+            
+            <div class="content">
+                <p>처음 AI를 구독했을 때의 사용법은 마치 네이버 지식인처럼 단순했다. 궁금한 것을 물으면 답을 받고, 그 답을 확인하는 정도였다. 시간이 흘렀지만, AI를 이용한 요란스러운 활동이 SNS에 넘쳐나는 동안에도 나의 활용 방식은 크게 변하지 않았다.</p>
+                
+                <p>이러한 AI 활용 방식이 단순히 스마트폰 환경 때문인가 싶었지만, 막상 노트북 환경에서도 크게 달라지는 건 없었다. 다른 사람들이 AI를 활용해 새로운 것을 만들 때마다 나도 그 아이디어를 따라 시도했지만, 돌아오는 건 번번이 오류 메시지와 미완성 작업뿐이었다. 끈기 있게 하나씩 배워나갔다면 결과가 달라졌을지도 모르지만, 오히려 AI를 탓하기 바빴다. 'AI가 개인의 능력을 이미 넘었으니 이제는 배우기보단 활용에 집중하라'는 기업들의 메시지를 들으며, 나는 AI가 내 요구를 따라오지 못한다고 생각했다.</p>
+                
+                <p>대표적인 예가 지금 내가 시도하는 GitHub pages를 이용한 개인 블로그였다. AI에게 질문하고 지시에 따라 작업을 시도했지만, 매번 내 노트북(M1 맥북 에어)에서는 jekyll 설치부터 막혔다. 기본적으로 맥에서 지원하는 ruby 환경과 jekyll의 설정에서 문제가 발생하는 듯했지만, AI가 제안한 여러 방법을 반복해도 실패했다. 결국 블로그 만들기는 매번 중단되었다.</p>
+                
+                <p>그러던 중 MCP(Model Context Protocol)라는 용어가 화제가 되었고, 나도 호기심에 Claude desktop에서 MCP를 사용해 보기로 했다.</p>
+                
+                <p><em>사실 MCP에 대한 설명을 읽어도 제대로 이해하기 어려웠다. 그래서 그냥 '그렇구나' 하고 외워두는 정도였다. 지금도 사실 크게 다르지 않다.</em></p>
+                
+                <p>그리고 마침내 나는 GitHub pages를 통해 블로그를 만들 수 있었다.</p>
+                
+                <p>물론 이번에도 몇 번의 시행착오가 있었다. Claude desktop에서 MCP를 사용하여 처음 얻은 권한은 터미널 접근이었고, 나는 이를 통해 다시 한번 Jekyll 설치를 시도했다. 그러나 역시나 오류가 반복되었고, 이 과정에서 Claude의 귀한 토큰(정확히 표현이 맞는지는 모르겠다)을 모두 소비하며 꽤 오랜 시간을 기다려야 했다.</p>
+                
+                <p>최종적으로 성공한 방식은 GitHub에서 공식적으로 제공하는 MCP 서버를 이용한 것이었다.</p>
+                
+                <p>이 과정에서 내가 Claude에게 입력한 프롬프트는 딱 두 가지였다.</p>
+                
+                <p>첫 번째:</p>
+                
+                <pre><code>github에서 github pages를 만들기 위해 repositories를 생성해줘.</code></pre>
+                
+                <p>두 번째:</p>
+                
+                <pre><code>개인 사이트를 블로그 형식으로 만들거야.
+주제는 일상이야. 대체로 IT 문외한인 내가 AI 도구들을 활용하며 느끼고 이해한 점을 다룰 생각이야.
+소개글은 다음과 같아.
+***
+AI도 잘 모르고, IT도 서툽니다.
+그래도 써보면 뭔가 재미는 있어요.
+그런 날것의 기록입니다.
+***
+활동명은 Don Bunny Park으로 정했고, 블로그 이름은 Don Bunny Park's Notes로 할 거야.</code></pre>
+                
+                <p>이번 작업을 하면서 문득 부모님이 스마트폰이나 다른 전자기기의 문제를 나에게 물어볼 때의 모습이 떠올랐다. 비대면으로 도움을 드리면 해결되지 않는 경우가 많고, 직접 만나야 문제를 해결할 수 있는 상황이 내가 AI와 겪었던 관계와 비슷하게 느껴졌다.</p>
+                
+                <p>결국 MCP 개념도 'AI에게 직접 도구 사용 권한을 부여한다'는 의미에서 부모님과 나의 관계에 빗대어 이해할 수 있었다.</p>
+                
+                <p>다만 앞으로 내가 원하는 것을 더욱 구체적으로 설명할 필요가 있다는 생각도 들었다. 나는 단지 블로그를 개설만 하려 했지만, Claude는 첫 게시물까지 만들어 올려버렸다. 내가 원하지 않은 결과물과 그 내용을 보며, Claude가 과도한 작업을 했다고 탓하기보다는 프롬프팅 능력이 부족한 나의 책임이라 생각해본다.</p>
+            </div>
+            
+            <div class="post-navigation">
+                <a href="../index.html" class="back-link">← 홈으로 돌아가기</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Don Bunny Park. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
