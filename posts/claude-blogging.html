@@ -5,6 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Claude를 이용하여 블로그하기 - Don Bunny Park's Notes</title>
     <link rel="stylesheet" href="../styles.css">
+    <style>
+        .prompt-box {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .prompt-box h4 {
+            margin-top: 0;
+            color: #495057;
+            font-weight: 600;
+        }
+        
+        .prompt-box pre {
+            background-color: #f1f3f5;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 0;
+            border-left: 3px solid #4dabf7;
+            font-family: 'Consolas', 'Monaco', monospace;
+            overflow-x: auto;
+        }
+        
+        .prompt-box code {
+            font-size: 0.9em;
+            color: #212529;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -38,13 +68,16 @@
                 
                 <p>이 과정에서 내가 Claude에게 입력한 프롬프트는 딱 두 가지였다.</p>
                 
-                <p>첫 번째:</p>
-                
-                <pre><code>github에서 github pages를 만들기 위해 repositories를 생성해줘.</code></pre>
+                <div class="prompt-box">
+                    <h4>프롬프트 1:</h4>
+                    <pre><code>github에서 github pages를 만들기 위해 repositories를 생성해줘.</code></pre>
+                </div>
                 
                 <p>두 번째:</p>
                 
-                <pre><code>개인 사이트를 블로그 형식으로 만들거야.
+                <div class="prompt-box">
+                    <h4>프롬프트 2:</h4>
+                    <pre><code>개인 사이트를 블로그 형식으로 만들거야.
 주제는 일상이야. 대체로 IT 문외한인 내가 AI 도구들을 활용하며 느끼고 이해한 점을 다룰 생각이야.
 소개글은 다음과 같아.
 ***
@@ -53,6 +86,7 @@ AI도 잘 모르고, IT도 서툽니다.
 그런 날것의 기록입니다.
 ***
 활동명은 Don Bunny Park으로 정했고, 블로그 이름은 Don Bunny Park's Notes로 할 거야.</code></pre>
+                </div>
                 
                 <p>이번 작업을 하면서 문득 부모님이 스마트폰이나 다른 전자기기의 문제를 나에게 물어볼 때의 모습이 떠올랐다. 비대면으로 도움을 드리면 해결되지 않는 경우가 많고, 직접 만나야 문제를 해결할 수 있는 상황이 내가 AI와 겪었던 관계와 비슷하게 느껴졌다.</p>
                 
