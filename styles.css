@@ -1,3 +1,20 @@
+/* 폰트 스타일 */
+.dongle-light {
+  font-family: "Dongle", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.dongle-regular {
+  font-family: "Dongle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.dongle-bold {
+  font-family: "Dongle", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 /* 기본 스타일 */
 * {
     margin: 0;
@@ -29,13 +46,15 @@ header {
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-bottom: 0.5rem;
+    line-height: 1.2;
 }
 
 .tagline {
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     opacity: 0.9;
+    line-height: 1.2;
 }
 
 /* 본문 내용 */
@@ -57,6 +76,8 @@ blockquote {
     margin: 1.5rem 0;
     font-style: italic;
     color: #555;
+    font-size: 1.8rem;
+    line-height: 1.3;
 }
 
 .posts {
@@ -71,6 +92,8 @@ h2 {
     padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
     color: #2e73b8;
+    font-size: 2.8rem;
+    line-height: 1.2;
 }
 
 .post {
@@ -79,6 +102,8 @@ h2 {
 
 .post h3 {
     margin-bottom: 0.5rem;
+    font-size: 2.3rem;
+    line-height: 1.2;
 }
 
 .date {
@@ -93,6 +118,7 @@ h2 {
     font-weight: bold;
     text-decoration: none;
     margin-top: 0.5rem;
+    font-size: 1.5rem;
 }
 
 .read-more:hover {
@@ -106,7 +132,7 @@ footer {
     padding: 1.5rem 0;
     margin-top: 2rem;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
 }
 
 /* 블로그 포스트 페이지 스타일 */
@@ -121,7 +147,8 @@ footer {
 .post-content h1 {
     color: #2e73b8;
     margin-bottom: 0.5rem;
-    font-size: 2.2rem;
+    font-size: 2.8rem;
+    line-height: 1.2;
 }
 
 .content {
@@ -152,6 +179,7 @@ footer {
     color: #2e73b8;
     font-weight: bold;
     text-decoration: none;
+    font-size: 1.5rem;
 }
 
 .back-link:hover {
@@ -161,14 +189,26 @@ footer {
 /* 반응형 디자인 */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
     
     .tagline {
-        font-size: 1rem;
+        font-size: 1.8rem;
     }
     
     .post-content h1 {
-        font-size: 1.8rem;
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+    .post h3 {
+        font-size: 2rem;
+    }
+    
+    blockquote {
+        font-size: 1.6rem;
     }
 }
