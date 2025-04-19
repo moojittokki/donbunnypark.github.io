@@ -1,0 +1,129 @@
+# Don Bunny Park 블로그 상태 문서
+
+## 블로그 메타데이터
+```
+{
+  "name": "Don Bunny Park's Notes",
+  "url": "https://moojittokki.github.io/donbunnypark.github.io/",
+  "description": "AI와 IT를 배우고 활용하는 일상 블로그",
+  "lastUpdated": "2025-04-19",
+  "createdAt": "2025-04-15",
+  "owner": "moojittokki",
+  "motto": "AI도 잘 모르고, IT도 서툽니다. 그래도 써보면 뭔가 재미는 있어요. 그런 날것의 기록입니다."
+}
+```
+
+## 파일 구조
+```
+donbunnypark.github.io/
+├── README.md
+├── index.html
+├── styles.css
+├── blog-state.md (이 문서)
+└── posts/
+    ├── first-post.html
+    └── claude-blogging.html
+```
+
+## 포스트 목록
+```
+[
+  {
+    "id": "first-post",
+    "title": "블로그를 시작합니다",
+    "date": "2025-04-15",
+    "path": "posts/first-post.html",
+    "description": "Don Bunny Park's Notes 블로그를 시작합니다. 앞으로 AI 도구들을 활용하면서 경험한 것들과 배운 것들을 기록할 예정입니다."
+  },
+  {
+    "id": "claude-blogging",
+    "title": "Claude를 이용하여 블로그하기",
+    "date": "2025-04-15",
+    "path": "posts/claude-blogging.html",
+    "description": "Claude와 MCP를 활용하여 드디어 GitHub Pages 블로그를 만들게 된 경험과 AI 도구 활용에 대한 생각을 공유합니다."
+  }
+]
+```
+
+## 테마 및 디자인 정보
+```
+{
+  "primaryFont": "Dongle, sans-serif",
+  "fontWeights": ["300 (light)", "400 (regular)", "700 (bold)"],
+  "fallbackFonts": "'Apple SD Gothic Neo', 'Nanum Gothic', 'Malgun Gothic', sans-serif",
+  "primaryColor": "#2e73b8",
+  "backgroundColor": "#f9f9f9",
+  "textColor": "#333",
+  "footerColor": "#333",
+  "blockquoteStyle": "border-left: 4px solid #2e73b8",
+  "responsive": true
+}
+```
+
+## 관계 그래프 (Graph Database)
+```
+// 노드
+Nodes = [
+  { id: "blog", label: "블로그", type: "site" },
+  { id: "index", label: "메인페이지", type: "page" },
+  { id: "styles", label: "스타일시트", type: "asset" },
+  { id: "readme", label: "README", type: "document" },
+  { id: "posts_dir", label: "포스트 디렉토리", type: "directory" },
+  { id: "post1", label: "블로그를 시작합니다", type: "post" },
+  { id: "post2", label: "Claude를 이용하여 블로그하기", type: "post" }
+]
+
+// 엣지 (관계)
+Edges = [
+  { from: "blog", to: "index", relationship: "CONTAINS" },
+  { from: "blog", to: "styles", relationship: "USES" },
+  { from: "blog", to: "readme", relationship: "DESCRIBED_BY" },
+  { from: "blog", to: "posts_dir", relationship: "CONTAINS" },
+  { from: "posts_dir", to: "post1", relationship: "CONTAINS" },
+  { from: "posts_dir", to: "post2", relationship: "CONTAINS" },
+  { from: "index", to: "styles", relationship: "IMPORTS" },
+  { from: "post1", to: "styles", relationship: "IMPORTS" },
+  { from: "post2", to: "styles", relationship: "IMPORTS" },
+  { from: "index", to: "post1", relationship: "LINKS_TO" },
+  { from: "index", to: "post2", relationship: "LINKS_TO" }
+]
+```
+
+## 컴포넌트 구조
+```
+{
+  "header": {
+    "title": "Don Bunny Park's Notes",
+    "tagline": "AI와 IT를 배우고 활용하는 일상 블로그"
+  },
+  "mainPage": {
+    "intro": {
+      "title": "안녕하세요!",
+      "quote": "AI도 잘 모르고, IT도 서툽니다.\n그래도 써보면 뭔가 재미는 있어요.\n그런 날것의 기록입니다."
+    },
+    "posts": {
+      "title": "최근 글",
+      "items": ["post1", "post2"]
+    }
+  },
+  "postTemplate": {
+    "header": "동일",
+    "content": "포스트별 내용",
+    "navigation": "홈으로 돌아가기 링크"
+  },
+  "footer": {
+    "copyright": "© 2025 Don Bunny Park. All rights reserved."
+  }
+}
+```
+
+## 마지막 변경 사항
+- 생성일: 2025-04-15
+- 마지막 업데이트: 2025-04-19
+- 총 포스트 수: 2
+
+## 앞으로 작업 시 참고사항
+- 새 포스트 추가할 때 날짜 형식: "YYYY년 MM월 DD일"
+- 모든 .html 파일에 스타일시트 링크 포함 필요
+- 폰트 클래스 적용: dongle-light, dongle-regular, dongle-bold
+- 모든 페이지에 헤더와 푸터 일관되게 유지
