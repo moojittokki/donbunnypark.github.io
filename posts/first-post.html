@@ -36,6 +36,31 @@
                 <p>블로그를 운영하면서 배우는 것들도 함께 기록할 예정이니 많은 관심 부탁드립니다!</p>
             </div>
             
+            <!-- 댓글 섹션 추가 -->
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                */
+                var disqus_config = function () {
+                    // 이 포스트의 URL, 식별자, 제목을 설정합니다.
+                    this.page.url = 'https://moojittokki.github.io/donbunnypark.github.io/posts/first-post.html';
+                    this.page.identifier = 'posts/first-post.html';
+                    this.page.title = '블로그를 시작합니다';
+                };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://' + 'https-moojittokki-github-io-donbunnypark-github-io' + '.disqus.com/embed.js'; // 사용자님의 Shortname이 여기에 들어갑니다.
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>
+                댓글을 보려면 JavaScript를 활성화하세요. <a href="https://disqus.com/?ref_noscript">Disqus 구동 댓글 로드</a>
+            </noscript>
+            <!-- 댓글 섹션 끝 -->
+            
             <div class="post-navigation">
                 <a href="../index.html" class="back-link dongle-regular">← 홈으로 돌아가기</a>
             </div>
