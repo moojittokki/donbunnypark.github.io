@@ -33,14 +33,16 @@ donbunnypark.github.io/
     "title": "블로그를 시작합니다",
     "date": "2025-04-15",
     "path": "posts/first-post.html",
-    "description": "Don Bunny Park's Notes 블로그를 시작합니다. 앞으로 AI 도구들을 활용하면서 경험한 것들과 배운 것들을 기록할 예정입니다."
+    "description": "Don Bunny Park's Notes 블로그를 시작합니다. 앞으로 AI 도구들을 활용하면서 경험한 것들과 배운 것들을 기록할 예정입니다.",
+    "comments": true
   },
   {
     "id": "claude-blogging",
     "title": "Claude를 이용하여 블로그하기",
     "date": "2025-04-15",
     "path": "posts/claude-blogging.html",
-    "description": "Claude와 MCP를 활용하여 드디어 GitHub Pages 블로그를 만들게 된 경험과 AI 도구 활용에 대한 생각을 공유합니다."
+    "description": "Claude와 MCP를 활용하여 드디어 GitHub Pages 블로그를 만들게 된 경험과 AI 도구 활용에 대한 생각을 공유합니다.",
+    "comments": true
   }
 ]
 ```
@@ -70,7 +72,8 @@ Nodes = [
   { id: "readme", label: "README", type: "document" },
   { id: "posts_dir", label: "포스트 디렉토리", type: "directory" },
   { id: "post1", label: "블로그를 시작합니다", type: "post" },
-  { id: "post2", label: "Claude를 이용하여 블로그하기", type: "post" }
+  { id: "post2", label: "Claude를 이용하여 블로그하기", type: "post" },
+  { id: "disqus", label: "Disqus 댓글 시스템", type: "external_service" }
 ]
 
 // 엣지 (관계)
@@ -85,7 +88,9 @@ Edges = [
   { from: "post1", to: "styles", relationship: "IMPORTS" },
   { from: "post2", to: "styles", relationship: "IMPORTS" },
   { from: "index", to: "post1", relationship: "LINKS_TO" },
-  { from: "index", to: "post2", relationship: "LINKS_TO" }
+  { from: "index", to: "post2", relationship: "LINKS_TO" },
+  { from: "post1", to: "disqus", relationship: "INTEGRATES" },
+  { from: "post2", to: "disqus", relationship: "INTEGRATES" }
 ]
 ```
 
@@ -109,10 +114,21 @@ Edges = [
   "postTemplate": {
     "header": "동일",
     "content": "포스트별 내용",
+    "comments": "Disqus 댓글 시스템",
     "navigation": "홈으로 돌아가기 링크"
   },
   "footer": {
     "copyright": "© 2025 Don Bunny Park. All rights reserved."
+  },
+  "externalServices": {
+    "disqus": {
+      "shortname": "https-moojittokki-github-io-donbunnypark-github-io",
+      "configPerPost": {
+        "url": "[포스트의 전체 웹 주소]",
+        "identifier": "[포스트 경로 또는 ID]",
+        "title": "[포스트 제목]"
+      }
+    }
   }
 }
 ```
@@ -121,9 +137,14 @@ Edges = [
 - 생성일: 2025-04-15
 - 마지막 업데이트: 2025-04-19
 - 총 포스트 수: 2
+- 모든 포스트에 Disqus 댓글 기능 추가 (2025-04-19)
 
 ## 앞으로 작업 시 참고사항
 - 새 포스트 추가할 때 날짜 형식: "YYYY년 MM월 DD일"
 - 모든 .html 파일에 스타일시트 링크 포함 필요
 - 폰트 클래스 적용: dongle-light, dongle-regular, dongle-bold
 - 모든 페이지에 헤더와 푸터 일관되게 유지
+- 새 포스트 생성 시 Disqus 댓글 코드도 함께 추가 필요
+  - URL: 'https://moojittokki.github.io/donbunnypark.github.io/[포스트 경로]'
+  - identifier: '[포스트 경로 또는 ID]'
+  - title: '[포스트 제목]'
