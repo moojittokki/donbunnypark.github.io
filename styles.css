@@ -168,6 +168,23 @@ footer {
     margin-bottom: 0.5rem;
 }
 
+/* Disqus 댓글 영역 스타일 */
+#disqus_thread {
+    margin-left: -2rem;  /* 부모 요소(.post-content)의 왼쪽 패딩 값만큼 왼쪽 마진을 음수로 설정 */
+    margin-right: -2rem; /* 부모 요소(.post-content)의 오른쪽 패딩 값만큼 오른쪽 마진을 음수로 설정 */
+    box-sizing: border-box; /* 표준 박스 모델 계산 적용 (기본값일 수 있으나 명시) */
+    /* 참고: 이 설정으로 대부분 해결되지만, 만약 필요하다면 min-width: 320px; 와 같은 최소 너비 설정을 추가하여 공간을 더 확보할 수 있습니다. */
+}
+/* 반응형 디자인 고려: 만약 768px 이하 화면에서 .post-content 패딩이 달라진다면, */
+/* 아래 @media 쿼리 안에 해당 너비의 음수 마진을 별도로 설정해야 합니다. */
+/* 현재 스타일시트 기준으로는 .post-content 패딩이 @media에서 변하지 않으므로 아래 코드는 필요 없을 수 있습니다. */
+/* @media (max-width: 768px) { */
+/* #disqus_thread { */
+/* margin-left: -Xrem; /* 모바일에서의 .post-content 패딩 값으로 대체 */ */
+/* margin-right: -Xrem; */
+/* } */
+/* } */
+
 .post-navigation {
     margin-top: 3rem;
     padding-top: 1rem;

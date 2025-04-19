@@ -58,7 +58,12 @@ donbunnypark.github.io/
   "textColor": "#333",
   "footerColor": "#333",
   "blockquoteStyle": "border-left: 4px solid #2e73b8",
-  "responsive": true
+  "responsive": true,
+  "disqusLayout": {
+    "marginLeft": "-2rem",
+    "marginRight": "-2rem",
+    "boxSizing": "border-box"
+  }
 }
 ```
 
@@ -127,6 +132,9 @@ Edges = [
         "url": "[포스트의 전체 웹 주소]",
         "identifier": "[포스트 경로 또는 ID]",
         "title": "[포스트 제목]"
+      },
+      "layoutFixes": {
+        "reCaptchaFix": "음수 마진을 통한 가로 공간 확보"
       }
     }
   }
@@ -138,6 +146,7 @@ Edges = [
 - 마지막 업데이트: 2025-04-19
 - 총 포스트 수: 2
 - 모든 포스트에 Disqus 댓글 기능 추가 (2025-04-19)
+- Disqus 댓글의 reCAPTCHA 레이아웃 문제 해결을 위한 CSS 수정 (2025-04-19)
 
 ## 앞으로 작업 시 참고사항
 - 새 포스트 추가할 때 날짜 형식: "YYYY년 MM월 DD일"
