@@ -22,18 +22,19 @@ donbunnypark.github.io/
 ├── blog-state.md (이 문서)
 └── posts/
     ├── first-post.html
-    └── claude-blogging.html
+    ├── claude-blogging.html
+    └── disqus-comments.html
 ```
 
 ## 포스트 목록
 ```
 [
   {
-    "id": "first-post",
-    "title": "블로그를 시작합니다",
-    "date": "2025-04-15",
-    "path": "posts/first-post.html",
-    "description": "Don Bunny Park's Notes 블로그를 시작합니다. 앞으로 AI 도구들을 활용하면서 경험한 것들과 배운 것들을 기록할 예정입니다.",
+    "id": "disqus-comments",
+    "title": "댓글 기능을 위한 작업들",
+    "date": "2025-04-20",
+    "path": "posts/disqus-comments.html",
+    "description": "블로그에 Disqus 댓글 기능을 추가하는 과정과 reCAPTCHA 문제 해결, 그리고 AI의 문제 해결 능력에 대한 생각을 공유합니다.",
     "comments": true,
     "analytics": true
   },
@@ -43,6 +44,15 @@ donbunnypark.github.io/
     "date": "2025-04-15",
     "path": "posts/claude-blogging.html",
     "description": "Claude와 MCP를 활용하여 드디어 GitHub Pages 블로그를 만들게 된 경험과 AI 도구 활용에 대한 생각을 공유합니다.",
+    "comments": true,
+    "analytics": true
+  },
+  {
+    "id": "first-post",
+    "title": "블로그를 시작합니다",
+    "date": "2025-04-15",
+    "path": "posts/first-post.html",
+    "description": "Don Bunny Park's Notes 블로그를 시작합니다. 앞으로 AI 도구들을 활용하면서 경험한 것들과 배운 것들을 기록할 예정입니다.",
     "comments": true,
     "analytics": true
   }
@@ -80,6 +90,7 @@ Nodes = [
   { id: "posts_dir", label: "포스트 디렉토리", type: "directory" },
   { id: "post1", label: "블로그를 시작합니다", type: "post" },
   { id: "post2", label: "Claude를 이용하여 블로그하기", type: "post" },
+  { id: "post3", label: "댓글 기능을 위한 작업들", type: "post" },
   { id: "disqus", label: "Disqus 댓글 시스템", type: "external_service" },
   { id: "google_analytics", label: "Google 애널리틱스", type: "external_service" }
 ]
@@ -92,17 +103,22 @@ Edges = [
   { from: "blog", to: "posts_dir", relationship: "CONTAINS" },
   { from: "posts_dir", to: "post1", relationship: "CONTAINS" },
   { from: "posts_dir", to: "post2", relationship: "CONTAINS" },
+  { from: "posts_dir", to: "post3", relationship: "CONTAINS" },
   { from: "index", to: "styles", relationship: "IMPORTS" },
   { from: "post1", to: "styles", relationship: "IMPORTS" },
   { from: "post2", to: "styles", relationship: "IMPORTS" },
+  { from: "post3", to: "styles", relationship: "IMPORTS" },
   { from: "index", to: "post1", relationship: "LINKS_TO" },
   { from: "index", to: "post2", relationship: "LINKS_TO" },
+  { from: "index", to: "post3", relationship: "LINKS_TO" },
   { from: "post1", to: "disqus", relationship: "INTEGRATES" },
   { from: "post2", to: "disqus", relationship: "INTEGRATES" },
+  { from: "post3", to: "disqus", relationship: "INTEGRATES" },
   { from: "blog", to: "google_analytics", relationship: "TRACKS_WITH" },
   { from: "index", to: "google_analytics", relationship: "TRACKED_BY" },
   { from: "post1", to: "google_analytics", relationship: "TRACKED_BY" },
-  { from: "post2", to: "google_analytics", relationship: "TRACKED_BY" }
+  { from: "post2", to: "google_analytics", relationship: "TRACKED_BY" },
+  { from: "post3", to: "google_analytics", relationship: "TRACKED_BY" }
 ]
 ```
 
@@ -120,7 +136,7 @@ Edges = [
     },
     "posts": {
       "title": "최근 글",
-      "items": ["post1", "post2"]
+      "items": ["post3", "post2", "post1"]
     }
   },
   "postTemplate": {
@@ -155,10 +171,11 @@ Edges = [
 ## 마지막 변경 사항
 - 생성일: 2025-04-15
 - 마지막 업데이트: 2025-04-20
-- 총 포스트 수: 2
+- 총 포스트 수: 3
 - 모든 포스트에 Disqus 댓글 기능 추가 (2025-04-19)
 - Disqus 댓글의 reCAPTCHA 레이아웃 문제 해결을 위한 CSS 수정 (2025-04-19)
 - 모든 페이지에 Google 애널리틱스 추적 코드 추가 (2025-04-20)
+- 새 포스트 추가: "댓글 기능을 위한 작업들" (2025-04-20)
 
 ## 앞으로 작업 시 참고사항
 - 새 포스트 추가할 때 날짜 형식: "YYYY년 MM월 DD일"
