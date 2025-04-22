@@ -6,7 +6,7 @@
   "name": "Don Bunny Park's Notes",
   "url": "https://moojittokki.github.io/donbunnypark.github.io/",
   "description": "AI와 IT를 배우고 활용하는 일상 블로그",
-  "lastUpdated": "2025-04-20",
+  "lastUpdated": "2025-04-22",
   "createdAt": "2025-04-15",
   "owner": "moojittokki",
   "motto": "AI도 잘 모르고, IT도 서툽니다. 그래도 써보면 뭔가 재미는 있어요. 그런 날것의 기록입니다."
@@ -23,12 +23,23 @@ donbunnypark.github.io/
 └── posts/
     ├── first-post.html
     ├── claude-blogging.html
-    └── disqus-comments.html
+    ├── disqus-comments.html
+    └── calculator-logic-game.html
 ```
 
 ## 포스트 목록
 ```
 [
+  {
+    "id": "calculator-logic-game",
+    "title": "아이디어 스케치: 계산기에서 출발한 논리력 훈련 게임 아이디어",
+    "date": "2025-04-22",
+    "path": "posts/calculator-logic-game.html",
+    "description": "계산기 사용 경험에서 시작하여 언어 이해력과 수학적 사고력을 결합한 교육용 게임 아이디어와 이를 프로그래밍까지 확장한 개념을 소개합니다.",
+    "comments": true,
+    "analytics": true,
+    "adsense": true
+  },
   {
     "id": "disqus-comments",
     "title": "댓글 기능을 위한 작업들",
@@ -94,6 +105,7 @@ Nodes = [
   { id: "post1", label: "블로그를 시작합니다", type: "post" },
   { id: "post2", label: "Claude를 이용하여 블로그하기", type: "post" },
   { id: "post3", label: "댓글 기능을 위한 작업들", type: "post" },
+  { id: "post4", label: "아이디어 스케치: 계산기에서 출발한 논리력 훈련 게임 아이디어", type: "post" },
   { id: "disqus", label: "Disqus 댓글 시스템", type: "external_service" },
   { id: "google_analytics", label: "Google 애널리틱스", type: "external_service" },
   { id: "google_adsense", label: "Google 애드센스", type: "external_service" }
@@ -108,26 +120,32 @@ Edges = [
   { from: "posts_dir", to: "post1", relationship: "CONTAINS" },
   { from: "posts_dir", to: "post2", relationship: "CONTAINS" },
   { from: "posts_dir", to: "post3", relationship: "CONTAINS" },
+  { from: "posts_dir", to: "post4", relationship: "CONTAINS" },
   { from: "index", to: "styles", relationship: "IMPORTS" },
   { from: "post1", to: "styles", relationship: "IMPORTS" },
   { from: "post2", to: "styles", relationship: "IMPORTS" },
   { from: "post3", to: "styles", relationship: "IMPORTS" },
+  { from: "post4", to: "styles", relationship: "IMPORTS" },
   { from: "index", to: "post1", relationship: "LINKS_TO" },
   { from: "index", to: "post2", relationship: "LINKS_TO" },
   { from: "index", to: "post3", relationship: "LINKS_TO" },
+  { from: "index", to: "post4", relationship: "LINKS_TO" },
   { from: "post1", to: "disqus", relationship: "INTEGRATES" },
   { from: "post2", to: "disqus", relationship: "INTEGRATES" },
   { from: "post3", to: "disqus", relationship: "INTEGRATES" },
+  { from: "post4", to: "disqus", relationship: "INTEGRATES" },
   { from: "blog", to: "google_analytics", relationship: "TRACKS_WITH" },
   { from: "blog", to: "google_adsense", relationship: "MONETIZES_WITH" },
   { from: "index", to: "google_analytics", relationship: "TRACKED_BY" },
   { from: "post1", to: "google_analytics", relationship: "TRACKED_BY" },
   { from: "post2", to: "google_analytics", relationship: "TRACKED_BY" },
   { from: "post3", to: "google_analytics", relationship: "TRACKED_BY" },
+  { from: "post4", to: "google_analytics", relationship: "TRACKED_BY" },
   { from: "index", to: "google_adsense", relationship: "MONETIZED_BY" },
   { from: "post1", to: "google_adsense", relationship: "MONETIZED_BY" },
   { from: "post2", to: "google_adsense", relationship: "MONETIZED_BY" },
-  { from: "post3", to: "google_adsense", relationship: "MONETIZED_BY" }
+  { from: "post3", to: "google_adsense", relationship: "MONETIZED_BY" },
+  { from: "post4", to: "google_adsense", relationship: "MONETIZED_BY" }
 ]
 ```
 
@@ -145,7 +163,7 @@ Edges = [
     },
     "posts": {
       "title": "최근 글",
-      "items": ["post3", "post2", "post1"]
+      "items": ["post4", "post3", "post2", "post1"]
     }
   },
   "postTemplate": {
@@ -183,13 +201,14 @@ Edges = [
 
 ## 마지막 변경 사항
 - 생성일: 2025-04-15
-- 마지막 업데이트: 2025-04-20
-- 총 포스트 수: 3
+- 마지막 업데이트: 2025-04-22
+- 총 포스트 수: 4
 - 모든 포스트에 Disqus 댓글 기능 추가 (2025-04-19)
 - Disqus 댓글의 reCAPTCHA 레이아웃 문제 해결을 위한 CSS 수정 (2025-04-19)
 - 모든 페이지에 Google 애널리틱스 추적 코드 추가 (2025-04-20)
 - 모든 페이지에 Google 애드센스 코드 추가 (2025-04-20)
 - 새 포스트 추가: "댓글 기능을 위한 작업들" (2025-04-20)
+- 새 포스트 추가: "아이디어 스케치: 계산기에서 출발한 논리력 훈련 게임 아이디어" (2025-04-22)
 
 ## 앞으로 작업 시 참고사항
 - 새 포스트 추가할 때 날짜 형식: "YYYY년 MM월 DD일"
