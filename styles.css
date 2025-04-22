@@ -147,7 +147,7 @@ footer {
 .post-content h1 {
     color: #2e73b8;
     margin-bottom: 0.5rem;
-    font-size: 2.8rem;
+    font-size: 3.5rem;
     line-height: 1.2;
 }
 
@@ -234,7 +234,7 @@ footer {
 
 .content h2 {
     color: #2e73b8;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-top: 2.5rem;
     margin-bottom: 1.5rem;
     border-bottom: 2px solid #e1e8f0;
@@ -243,14 +243,14 @@ footer {
 
 .content h3 {
     color: #4a4a4a;
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
 
 .content h4 {
     color: #666;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     margin-top: 1.5rem;
     margin-bottom: 0.8rem;
 }
@@ -312,15 +312,19 @@ pre code {
     }
     
     .post-content h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
     
-    h2 {
-        font-size: 2.5rem;
-    }
-    
-    .post h3 {
+    .content h2 {
         font-size: 2rem;
+    }
+    
+    .content h3 {
+        font-size: 1.6rem;
+    }
+    
+    .content h4 {
+        font-size: 1.4rem;
     }
     
     blockquote {
